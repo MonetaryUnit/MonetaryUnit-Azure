@@ -18,7 +18,9 @@ The datadir and wallet are located at /var/lib/monetaryunitd and the node can be
 In order to run monetaryunit-cli without sudo or the extra arguments, you need to do the following:
 
 `mkdir ~/.monetaryunit`
+
 `sudo cp /etc/monetaryunit/monetaryunit.conf ~/.monetaryunit`
+
 `sudo chown $USER ~/.monetaryunit/monetaryunit.conf`
 
 
@@ -27,9 +29,11 @@ In order to run monetaryunit-cli without sudo or the extra arguments, you need t
 Once your node is deployed, you need to set your VM's public ip address in the config:
 
 `sudo echo "externalip=<YourMonetaryUnitPublicIP> "-e/etc/monetaryunit/monetaryunit.conf`
+
 `sudo service monetaryunit restart`
 
 You also need to remove your /var/lib/monetaryunitd/bootstrap.dat.old once your node is synced.
+
 `sudo rm /var/lib/monetaryunitd/bootstrap.dat.old`
 
 For security purposes the configuration script enables two things:
